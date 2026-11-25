@@ -12,6 +12,7 @@ import adminRoutes from './src/routes/admin.js';
 import { handleWebhook } from './src/controllers/webhookController.js';
 import messengerRoutes from './src/routes/messenger.js';
 import pingRouter from './src/routes/ping.js';
+import whatsappRoutes from './src/routes/whatsapp.js';
 
 dotenv.config();
 
@@ -35,7 +36,7 @@ app.post(
   },
   handleWebhook
 );
-
+app.use('/api/whatsapp', whatsappRoutes);
 // 2. express.json()
 app.use(express.json());
 
