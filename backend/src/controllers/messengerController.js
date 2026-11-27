@@ -13,7 +13,7 @@ import {
 
 // Facebook pe message bhejo
 const sendMessage = async (recipientId, text) => {
-  const url = `https://graph.facebook.com/v18.0/me/messages?access_token=${process.env.FACEBOOK_PAGE_TOKEN}`;
+  const url = `https://graph.facebook.com/v21.0/me/messages?access_token=${process.env.FACEBOOK_PAGE_TOKEN}`;
   
   await fetch(url, {
     method: 'POST',
